@@ -26,6 +26,7 @@ BG_PRESENT = "present"
 BG_INTERMITTENT = "intermittent"
 
 class WaldoMkII(klibs.Experiment, BoundaryInspector):
+	debug_mode = True
 	max_amplitude_deg = 6  # degrees of visual angle
 	min_amplitude_deg = 3  # degrees of visual angle
 	max_amplitude = None  # px
@@ -38,8 +39,8 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 	search_disc_color = BLACK
 	display_margin = None  # ie. the area in which targets may not be presented
 	allow_intermittent_bg = True
-	fixation_boundary_tolerance = 1.5  # scales boundary (not image) if drift_correct target too small to fixate
-	disc_boundary_tolerance = 1.5  # scales boundary (not image) if drift_correct target too small to fixate
+	fixation_boundary_tolerance = 3  # scales boundary (not image) if drift_correct target too small to fixate
+	disc_boundary_tolerance = 0.5  # scales boundary (not image) if drift_correct target too small to fixate
 	looked_away_msg = None
 	eyes_moved_message = None
 
@@ -50,7 +51,8 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 	bg = None
 	bg_state = None
 	saccade_count = None
-	frame_size = "1024x768"
+	frame_size = "1920x1200"
+	#frame_size = "1024x768"
 	n_back = None  # populated from config
 	angle = None   # populated from config
 	n_back_index = None
@@ -61,6 +63,7 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 		self.max_amplitude = deg_to_px(self.max_amplitude_deg)
 		self.min_amplitude = deg_to_px(self.min_amplitude_deg)
 		self.disc_diameter = deg_to_px(self.disc_diameter_deg)
+		self.disc_boundary_tolerance = deg_to_px(self.disc_boundary_tolerance)
 		self.display_margin = int(self.disc_diameter * 1.5)
 		self.search_disc_proto = kld.Annulus(self.disc_diameter, int(self.disc_diameter * 0.25), (2,WHITE), BLACK)
 		if Params.inter_disc_interval and Params.persist_to_exit_saccade:
@@ -75,24 +78,26 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 		self.text_manager.add_style("tny", 12)
 		self.looked_away_msg = self.message("Looked away too soon.", "err", blit=False)
 		self.message("Loading, please hold...", "msg", flip=True)
-		if not Params.testing:
-			scale_images = False
-			for i in range(1, 10):
-				self.ui_request()
-				image_key = "wally_0{0}".format(i)
-				#  there are 3 sizes of image included by default; if none match the screen res, choose 1080p then scale
-				image_f = os.path.join(Params.image_dir, image_key,"{0}x{1}.jpg".format(*Params.screen_x_y))
-				with open(os.path.join(Params.image_dir, image_key, "average_color.txt")) as color_f:
-					avg_color = eval(color_f.read())
-				if not os.path.isfile(image_f):
-					image_f = os.path.join(Params.image_dir, image_key, "1920x1080.jpg")
-					scale_images = True
-				img_ns = ns(image_f)
 
-				self.backgrounds[image_key] = ([image_key, img_ns, avg_color])
-				if scale_images:
-					self.backgrounds[image_key][1].scale(Params.screen_x_y)
-				self.backgrounds[image_key][1] = self.backgrounds[image_key][1].render()
+		scale_images = False
+		image_list = range(1, 10) if not self.debug_mode else [1]
+		for i in image_list:
+			self.ui_request()
+			image_key = "wally_0{0}".format(i)
+			#  there are 3 sizes of image included by default; if none match the screen res, choose 1080p then scale
+			image_f = os.path.join(Params.image_dir, image_key,"{0}x{1}.jpg".format(*Params.screen_x_y))
+			with open(os.path.join(Params.image_dir, image_key, "average_color.txt")) as color_f:
+				avg_color = eval(color_f.read())
+			if not os.path.isfile(image_f):
+				#image_f = os.path.join(Params.image_dir, image_key, "1920x1080.jpg")
+				image_f = os.path.join(Params.image_dir, image_key, "1920x1200.jpg")
+				scale_images = True
+			img_ns = ns(image_f)
+
+			self.backgrounds[image_key] = ([image_key, img_ns, avg_color])
+			if scale_images:
+				self.backgrounds[image_key][1].scale(Params.screen_x_y)
+			self.backgrounds[image_key][1] = self.backgrounds[image_key][1].render()
 
 	def block(self):
 		pass
@@ -126,18 +131,15 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 		self.display_refresh(True)
 
 	def trial(self):
-		show_mouse_cursor()
 		self.eyelink.start(Params.trial_number)
 		self.initial_fixation()
 		show_dc_target = True
 		for l in self.locations:
-			print "getting here too"
 			# assert a previous location if there is one for reference later in the loop
 			if l.index > 0:
 				l_prev = self.locations[l.index - 1]
 				l.onset_delay(l_prev)  # does nothing when Params.inter_disc_interval is False
 			else:
-				#l.allow_blit = True  # first disc is always g2g, even when using Params.inter_disc_interval
 				l_prev = None # ie. first location
 
 			self.display_refresh(show_dc_target, [l, l_prev]) # get this done right away for initial blit
@@ -156,7 +158,6 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 				l.timed_out = True
 
 		self.eyelink.stop()
-		hide_mouse_cursor()
 		return {"trial_num": Params.trial_number,
 				"block_num": Params.block_number,
 				"bg_image": self.bg[0],
@@ -166,7 +167,8 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 				"bg_state": self.bg_state,
 				"n_back": self.n_back,
 				"amplitude": px_to_deg(self.locations[-1].amplitude),
-				"angle": self.locations[-1].angle,
+				"real_angle": int(self.locations[-1].angle + self.locations[-1].rotation),
+				"deviation": self.angle if self.angle <= 180 else self.angle - 180,
 				"saccades": self.saccade_count}
 
 	def trial_clean_up(self):
@@ -200,7 +202,7 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 	def initial_fixation(self):
 		self.display_refresh(True)
 		while self.evi.before("initial fixation end", True):
-			if not self.eyelink.within_boundary("trial_fixation"):
+			if self.eyelink.saccade_from_boundary("trial_fixation"):
 				fif_e = ET("failed initial fixation", Params.clock.trial_time + 1.0, None, False, TK_S)
 				Params.clock.register_event(fif_e)
 				while self.evi.before("failed initial fixation", True):
@@ -228,6 +230,7 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 		#  show the drift correct target if need be
 		if drift_correct:
 			self.blit(kld.drift_correct_target(), position=Params.screen_c, registration=5)
+
 		#  blit passed discs if they're allow_blit attribute is set
 		for d in discs:
 			if d is not None:
@@ -246,7 +249,6 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 					d.off_timestamp = timestamp
 
 	def generate_locations(self):
-		self.angle = 0
 		self.n_back_index = self.saccade_count - (2 + self.n_back)  # 1 for index, 1 b/c  n_back counts from penultimate saccade
 		failed_generations = 0
 
@@ -277,6 +279,7 @@ class DiscLocation(object):
 		self.rotation = 0
 		self.index = len(self.exp.locations)
 		self.boundary = "saccade_{0}".format(self.index)
+		self.boundary_img = None
 		self.x_y_pos = (None, None)
 		self.x_range = range(self.exp.display_margin, Params.screen_x - self.exp.display_margin)
 		self.y_range = range(self.exp.display_margin, Params.screen_y - self.exp.display_margin)
@@ -323,9 +326,9 @@ class DiscLocation(object):
 		self.onset_delay_label = self.name + "_onset_delay_disc"
 
 	def __str__(self):
-		f = "F" if self.final else "x"
-		p = "P"if self.penultimate else "x"
-		n = "N"if self.n_back else "x"
+		f = "F" if self.final else "-"
+		p = "P"if self.penultimate else "-"
+		n = "N"if self.n_back else "-"
 		str_vars = list(self.x_y_pos) + list(self.origin)
 		str_vars.extend([self.amplitude, self.angle, hex(id(self)), self.index, f, p, n])
 		return "<DiscLocation {7}{8}{9}{10} ({0},{1}) from ({2},{3}) ({4}px along {5} deg) at {6}>".format(*str_vars)
@@ -366,31 +369,21 @@ class DiscLocation(object):
 		theta = angle_between(self.x_y_pos, self.exp.locations[self.exp.n_back_index].x_y_pos)
 		for a in range(0, 360, 60):
 			self.__margin_check(point_pos(self.x_y_pos, d_xy, a + theta))
-		self.exp.search_disc_proto.fill = (0,255,0,255)
+		self.exp.search_disc_proto.fill = BLACK
 		self.penultimate = True
 
 	def __add_eyelink_boundary__(self):
-		r = int(self.exp.search_disc_proto.surface_width + self.exp.disc_boundary_tolerance) // 2
-
+		d = int(self.exp.search_disc_proto.surface_width + self.exp.disc_boundary_tolerance)
+		self.boundary_img = kld.Circle(d, [1, (255,0,0,125)]).render()
 		try:
-			self.exp.eyelink.add_boundary("saccade_{0}".format(self.index), [self.x_y_pos, r], CIRCLE_BOUNDARY)
+			self.exp.eyelink.add_boundary("saccade_{0}".format(self.index), [self.x_y_pos, d], CIRCLE_BOUNDARY)
 		except AttributeError:
-			self.exp.add_boundary("saccade_{0}".format(self.index), [self.x_y_pos, r], CIRCLE_BOUNDARY)
+			self.exp.add_boundary("saccade_{0}".format(self.index), [self.x_y_pos, d], CIRCLE_BOUNDARY)
 
 	def blit(self):
 		# for all possible conditions, timed-out discs are removed
 		if self.timed_out:
 			return
-
-		# when Params.inter_disc_iterval is not False, don't blit the current disc until the IDI has elapsed
-		# try:
-		# 	if self.exp.evi.after(self.onset_delay_label, True):
-		# 		self.allow_blit = True
-		# 		self.previous_disc.allow_blit = False
-		# 	else:
-		# 		self.allow_blit = False
-		# except NameError:
-		# 	pass  # if first disc or Params.persist_to_exit_saccade is True or Params.inter_disc_interval not set
 		if self.allow_blit:
 			self.exp.blit(self.disc, 5, self.x_y_pos)
 			self.initial_blit = True
@@ -400,15 +393,21 @@ class DiscLocation(object):
 			return
 		if self.final:
 			check_time = self.exp.eyelink.saccade_to_boundary(self.boundary, EL_SACCADE_END)
+			if check_time:
+				self.exp.fill()
+				self.exp.flip()
 		else:
 			check_time = self.exp.eyelink.fixated_boundary(self.boundary, EL_FIXATION_END)
-		timestamp = [Params.clock.trial_time, check_time]
-		if timestamp[1]:
-			self.rt = timestamp[1] - self.on_timestamp[1]
+			#print "check_time: " + str(check_time) + " [" + str(self.exp.eyelink.now()) + "]"
+		if check_time:
 			self.timed_out = False
-			self.record_fixation(timestamp)
+			timestamp = [Params.clock.trial_time, check_time]
 			if self.final:
+				self.rt = timestamp[0] - self.on_timestamp[0]
 				return
+			self.record_fixation(timestamp)
+			self.exp.eyelink.clear_queue()
+			return True
 
 	def check_persistence(self):
 		# not applicable on immediate-behavior targets
@@ -426,7 +425,6 @@ class DiscLocation(object):
 		self.previous_disc = previous_disc
 		if self.previous_disc.timed_out:
 			return
-
 		try:
 			Params.clock.register_event(ET(self.onset_delay_label, self.idi, relative=True))
 		except TypeError:  # ie. inter_disc_interval was False
@@ -438,7 +436,7 @@ class DiscLocation(object):
 	def record_fixation(self, timestamp):
 		self.exp.evi.write(self.event_fixate_label + " (trial_time={0})".format(timestamp[0]))
 		self.fixation = timestamp
-		self.rt = timestamp[1] - self.on_timestamp[1]  # use eye_link time for for RT
+		self.rt = timestamp[0] - self.on_timestamp[0]  # use eye_link time for for RT
 
 	def record_exit(self):
 		if self.exp.eyelink.within_boundary(self.boundary, EL_GAZE_POS):
@@ -451,10 +449,8 @@ class DiscLocation(object):
 
 	def record_start(self, timestamp):
 		# eye-link time unnecessary as the eyelink will supply this in the EDF when written
-		# Params.clock.update_event_onset(self.event_timeout_label, timestamp[0] * 1000 - self.timeout_at)
 		self.exp.evi.write(self.event_start_label + " (trial_time={0})".format(timestamp[0]))
 		self.on_timestamp = timestamp
-		# self.timeout_at = (self.on_timestamp[0] * 1000) + self.timeout_interval
 		Params.clock.register_event(ET(self.event_timeout_label, self.timeout_interval, relative=True))
 
 	@property

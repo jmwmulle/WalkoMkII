@@ -6,7 +6,7 @@ import random
 #########################################
 # Available Hardware
 #########################################
-eye_tracker_available = False
+eye_tracker_available = True
 eye_tracking = True
 labjack_available = False
 labjacking = False
@@ -79,7 +79,9 @@ demographic_questions = [
 #########################################
 # PROJECT-SPECIFIC VARS
 #########################################
+# disc persistence not yet ready; still buggy; leave False
 persist_to_exit_saccade = False #  else disc_n will me removed simultaneously with the presentation of disc_n+1
+
 fixation_interval = 3000  # ms
 disc_timeout_interval = 1000  # ms
 drift_correct_initial_persist = 1000  # ms

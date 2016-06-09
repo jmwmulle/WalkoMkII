@@ -73,7 +73,8 @@ CREATE TABLE trials (
   bg_state text not null,
   n_back integer not null,
   amplitude numeric not null,
-  angle integer not null,
+  deviation integer not null,
+  real_angle integer not null,
   saccades integer not null
 );
 
