@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="919899f2-fa1d-4e6c-9dcf-d91ff733318a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ray.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpAssets/WaldoMkII.db.backup" afterPath="$PROJECT_DIR$/ExpAssets/WaldoMkII.db.backup" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpAssets/WaldoMkII.db" afterPath="$PROJECT_DIR$/ExpAssets/WaldoMkII.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv" afterPath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py" afterPath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql" afterPath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experiment.py" afterPath="$PROJECT_DIR$/experiment.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WaldoMkII.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,6 +118,7 @@
         <option value="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv" />
         <option value="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql" />
         <option value="$PROJECT_DIR$/experiment.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -191,24 +187,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WaldoMkII" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WaldoMkII" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpAssets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -265,6 +243,24 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="WaldoMkII" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <list size="0" />
@@ -565,6 +561,13 @@
     <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="11" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.6297787">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="0.15549077">
           <folding />
         </state>
       </provider>
