@@ -26,7 +26,7 @@ BG_PRESENT = "present"
 BG_INTERMITTENT = "intermittent"
 
 class WaldoMkII(klibs.Experiment, BoundaryInspector):
-	debug_mode = True
+	debug_mode = False
 	max_amplitude_deg = 6  # degrees of visual angle
 	min_amplitude_deg = 3  # degrees of visual angle
 	max_amplitude = None  # px
@@ -45,6 +45,7 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 	eyes_moved_message = None
 
 	# trial vars
+	bg_per_trial = []
 	locations = []
 	trial_type = None
 	backgrounds = {}
@@ -98,6 +99,8 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 			if scale_images:
 				self.backgrounds[image_key][1].scale(Params.screen_x_y)
 			self.backgrounds[image_key][1] = self.backgrounds[image_key][1].render()
+		while len(self.bg_per_trial) < (Params.trials_per_block * Params.blocks_per_experiment) + 1:
+			self.bg_per_trial.append(choice(self.backgrounds.keys()))
 
 	def block(self):
 		pass
@@ -125,12 +128,26 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 				self.locations = []
 			self.flip()
 
-		self.bg = self.backgrounds[self.bg_image]
+		self.bg = choice(self.backgrounds)
 		Params.clock.register_event(ET("initial fixation end", Params.fixation_interval))
 		self.eyelink.drift_correct(boundary="trial_fixation")
 		self.display_refresh(True)
 
 	def trial(self):
+		if Params.development_mode:
+			return {"trial_num": Params.trial_number,
+					"block_num": Params.block_number,
+					"bg_image": "hi",
+					"timed_out": "FALSE",
+					"rt": -1.0,
+					"target_type": "NBACK",
+					"bg_state": "mom",
+					"n_back": 1,
+					"amplitude": 1,
+					"real_angle": 1,
+					"deviation": 1,
+					"saccades": 1}
+
 		self.eyelink.start(Params.trial_number)
 		self.initial_fixation()
 		show_dc_target = True
@@ -163,15 +180,36 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 				"bg_image": self.bg[0],
 				"timed_out": self.locations[-1].timed_out,
 				"rt": self.locations[-1].rt,
-				"target_type": "NBACK" if self.locations[-1].n_back else "NOVEL",
+				"target_type": "NBACK" if self.locations[-1].angle == 0 else "NOVEL",
 				"bg_state": self.bg_state,
 				"n_back": self.n_back,
 				"amplitude": px_to_deg(self.locations[-1].amplitude),
-				"real_angle": int(self.locations[-1].angle + self.locations[-1].rotation),
+				"real_angle": int(self.locations[-1].angle + self.locations[-1].rotation) % 360	,
 				"deviation": self.angle if self.angle <= 180 else self.angle - 180,
 				"saccades": self.saccade_count}
 
 	def trial_clean_up(self):
+#		if Params.development_mode:
+#			for l in self.locations:
+#				self.database.insert({
+#				'participant_id': Params.participant_id,
+#				'trial_id': Params.trial_id,
+#				'trial_num': Params.trial_number,
+#				'block_num': Params.block_number,
+#				'location_num': l.index,
+#				'x': l.x_y_pos[0],
+#				'y': l.x_y_pos[1],
+#				'amplitude': l.amplitude,
+#				'angle': l.angle,
+#				'n_back': l.n_back,
+#				'penultimate': l.penultimate,
+#				'final': l.final,
+#				'timed_out': "FALSE",
+#				'rt': -1.0,
+#				'fixate_trial_time': -1.0,
+#				'fixate_el_time': -1.0,
+#				}, 'trial_locations', False)
+#
 		if Params.trial_id:  # ie. if this isn't a recycled trial
 			for l in self.locations:
 				self.database.insert( {

@@ -38,9 +38,9 @@ cue_back_size = 1,  # deg of visual angle
 # Experiment Structure
 #########################################
 collect_demographics = True
-practicing = True
-trials_per_block = 240
-blocks_per_experiment = 2
+practicing = False
+trials_per_block = 72
+blocks_per_experiment = 3
 trials_per_participant = 0
 #
 #########################################
@@ -82,7 +82,7 @@ demographic_questions = [
 # disc persistence not yet ready; still buggy; leave False
 persist_to_exit_saccade = False #  else disc_n will me removed simultaneously with the presentation of disc_n+1
 
-fixation_interval = 3000  # ms
+fixation_interval = 1500  # ms
 disc_timeout_interval = 1000  # ms
 drift_correct_initial_persist = 1000  # ms
 final_disc_timeout_interval = 2000  # ms

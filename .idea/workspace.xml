@@ -2,8 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="919899f2-fa1d-4e6c-9dcf-d91ff733318a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_01/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_01/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_01/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_01/1920x1200.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_01/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_02/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_02/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_02/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_02/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_03/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_03/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_03/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_03/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_04/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_04/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_04/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_04/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_05/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_05/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_05/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_05/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_06/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_06/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_06/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_06/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_07/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_07/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_07/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_07/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_08/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_08/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_08/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_08/average_color.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_09/1024x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_09/1280x720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_09/1920x1080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExpAssets/Resources/image_bak/wally_09/average_color.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv" afterPath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py" afterPath="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experiment.py" afterPath="$PROJECT_DIR$/experiment.py" />
     </list>
     <ignored path="WaldoMkII.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,35 +64,14 @@
     <splitter split-orientation="horizontal" split-proportion="0.5865701">
       <split-first>
         <leaf>
-          <file leaf-file-name="experiment.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="experiment.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/experiment.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="164" column="44" selection-start="6014" selection-end="6014" vertical-scroll-proportion="0.54330707">
+                <state line="200" column="34" selection-start="7267" selection-end="7267" vertical-scroll-proportion="0.46420324">
                   <folding>
-                    <marker date="1465492426000" expanded="true" signature="676:17062" placeholder="..." />
-                    <element signature="e#1746#2376#0" expanded="true" />
-                    <element signature="e#2398#3819#0" expanded="true" />
-                    <element signature="e#3917#4682#0" expanded="true" />
-                    <element signature="e#7220#7731#0" expanded="true" />
-                    <element signature="e#7794#8805#0" expanded="true" />
-                    <element signature="e#8840#9298#0" expanded="true" />
-                    <element signature="e#9358#11686#0" expanded="true" />
-                    <element signature="e#11710#12059#0" expanded="true" />
-                    <element signature="e#12097#12849#0" expanded="true" />
-                    <element signature="e#12907#13128#0" expanded="true" />
-                    <element signature="e#13176#13713#0" expanded="true" />
-                    <element signature="e#13754#14133#0" expanded="true" />
-                    <element signature="e#14154#14338#0" expanded="true" />
-                    <element signature="e#14369#14998#0" expanded="true" />
-                    <element signature="e#15032#15254#0" expanded="true" />
-                    <element signature="e#15298#15720#0" expanded="true" />
-                    <element signature="e#15763#15957#0" expanded="true" />
-                    <element signature="e#15985#16347#0" expanded="true" />
-                    <element signature="e#16387#16688#0" expanded="true" />
-                    <element signature="e#16725#16748#0" expanded="true" />
-                    <element signature="e#16796#16887#0" expanded="true" />
-                    <element signature="e#16924#16947#0" expanded="true" />
-                    <element signature="e#16999#17062#0" expanded="true" />
+                    <element signature="e#2418#3989#0" expanded="true" />
+                    <element signature="e#4087#4862#0" expanded="true" />
+                    <element signature="e#4884#6915#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -63,19 +81,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="experiment.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/experiment.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="268" column="28" selection-start="9355" selection-end="9355" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="WaldoMkII_params.py" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="WaldoMkII_params.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="81" column="58" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0">
+                <state line="42" column="25" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.33090025">
                   <folding />
                 </state>
               </provider>
@@ -84,16 +93,16 @@
           <file leaf-file-name="WaldoMkII_config.csv" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="18" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+                <state line="1" column="48" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="WaldoMkII_schema.sql" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="WaldoMkII_schema.sql" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="75" column="11" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.6297787">
+                <state line="73" column="16" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -114,19 +123,19 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py" />
-        <option value="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv" />
         <option value="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql" />
-        <option value="$PROJECT_DIR$/experiment.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/experiment.py" />
+        <option value="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv" />
+        <option value="$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="23" />
-    <option name="width" value="1916" />
-    <option name="height" value="1177" />
+    <option name="x" value="83" />
+    <option name="y" value="173" />
+    <option name="width" value="1676" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -196,8 +205,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="editor.preferences.completion" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Python/Jon" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -313,14 +322,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1916" height="1177" extended-state="0" />
-    <editor active="true" />
+    <frame x="83" y="173" width="1676" height="1027" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15561497" sideWeight="0.6704981" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1613497" sideWeight="0.6704981" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -388,34 +397,34 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="58" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="7" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="11" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/experiment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="271" column="28" selection-start="9323" selection-end="9323" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1465492426000" expanded="true" signature="676:17062" placeholder="..." />
-            <element signature="e#1746#2376#0" expanded="true" />
-            <element signature="e#2398#3819#0" expanded="true" />
-            <element signature="e#3917#4682#0" expanded="true" />
-            <element signature="e#7220#7731#0" expanded="true" />
-            <element signature="e#7794#8805#0" expanded="true" />
-            <element signature="e#8840#9298#0" expanded="true" />
-            <element signature="e#9358#11686#0" expanded="true" />
-            <element signature="e#11710#12059#0" expanded="true" />
-            <element signature="e#12097#12849#0" expanded="true" />
-            <element signature="e#12907#13128#0" expanded="true" />
-            <element signature="e#13176#13713#0" expanded="true" />
-            <element signature="e#13754#14133#0" expanded="true" />
-            <element signature="e#14154#14338#0" expanded="true" />
-            <element signature="e#14369#14998#0" expanded="true" />
-            <element signature="e#15032#15254#0" expanded="true" />
-            <element signature="e#15298#15720#0" expanded="true" />
-            <element signature="e#15763#15957#0" expanded="true" />
-            <element signature="e#15985#16347#0" expanded="true" />
-            <element signature="e#16387#16688#0" expanded="true" />
-            <element signature="e#16725#16748#0" expanded="true" />
-            <element signature="e#16796#16887#0" expanded="true" />
-            <element signature="e#16924#16947#0" expanded="true" />
-            <element signature="e#16999#17062#0" expanded="true" />
+            <element signature="e#2418#3989#0" expanded="true" />
+            <element signature="e#4087#4862#0" expanded="true" />
+            <element signature="e#4884#6915#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -438,30 +447,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="271" column="28" selection-start="9323" selection-end="9323" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1465492426000" expanded="true" signature="676:17062" placeholder="..." />
-            <element signature="e#1746#2376#0" expanded="true" />
-            <element signature="e#2398#3819#0" expanded="true" />
-            <element signature="e#3917#4682#0" expanded="true" />
-            <element signature="e#7220#7731#0" expanded="true" />
-            <element signature="e#7794#8805#0" expanded="true" />
-            <element signature="e#8840#9298#0" expanded="true" />
-            <element signature="e#9358#11686#0" expanded="true" />
-            <element signature="e#11710#12059#0" expanded="true" />
-            <element signature="e#12097#12849#0" expanded="true" />
-            <element signature="e#12907#13128#0" expanded="true" />
-            <element signature="e#13176#13713#0" expanded="true" />
-            <element signature="e#13754#14133#0" expanded="true" />
-            <element signature="e#14154#14338#0" expanded="true" />
-            <element signature="e#14369#14998#0" expanded="true" />
-            <element signature="e#15032#15254#0" expanded="true" />
-            <element signature="e#15298#15720#0" expanded="true" />
-            <element signature="e#15763#15957#0" expanded="true" />
-            <element signature="e#15985#16347#0" expanded="true" />
-            <element signature="e#16387#16688#0" expanded="true" />
-            <element signature="e#16725#16748#0" expanded="true" />
-            <element signature="e#16796#16887#0" expanded="true" />
-            <element signature="e#16924#16947#0" expanded="true" />
-            <element signature="e#16999#17062#0" expanded="true" />
+            <element signature="e#2418#3989#0" expanded="true" />
+            <element signature="e#4087#4862#0" expanded="true" />
+            <element signature="e#4884#6915#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -484,30 +472,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="416" column="34" selection-start="15221" selection-end="15221" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1465492426000" expanded="true" signature="676:17062" placeholder="..." />
-            <element signature="e#1746#2376#0" expanded="true" />
-            <element signature="e#2398#3819#0" expanded="true" />
-            <element signature="e#3917#4682#0" expanded="true" />
-            <element signature="e#7220#7731#0" expanded="true" />
-            <element signature="e#7794#8805#0" expanded="true" />
-            <element signature="e#8840#9298#0" expanded="true" />
-            <element signature="e#9358#11686#0" expanded="true" />
-            <element signature="e#11710#12059#0" expanded="true" />
-            <element signature="e#12097#12849#0" expanded="true" />
-            <element signature="e#12907#13128#0" expanded="true" />
-            <element signature="e#13176#13713#0" expanded="true" />
-            <element signature="e#13754#14133#0" expanded="true" />
-            <element signature="e#14154#14338#0" expanded="true" />
-            <element signature="e#14369#14998#0" expanded="true" />
-            <element signature="e#15032#15254#0" expanded="true" />
-            <element signature="e#15298#15720#0" expanded="true" />
-            <element signature="e#15763#15957#0" expanded="true" />
-            <element signature="e#15985#16347#0" expanded="true" />
-            <element signature="e#16387#16688#0" expanded="true" />
-            <element signature="e#16725#16748#0" expanded="true" />
-            <element signature="e#16796#16887#0" expanded="true" />
-            <element signature="e#16924#16947#0" expanded="true" />
-            <element signature="e#16999#17062#0" expanded="true" />
+            <element signature="e#2418#3989#0" expanded="true" />
+            <element signature="e#4087#4862#0" expanded="true" />
+            <element signature="e#4884#6915#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -516,91 +483,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="438" column="45" selection-start="15784" selection-end="15784" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1465492426000" expanded="true" signature="676:17062" placeholder="..." />
-            <element signature="e#1746#2376#0" expanded="true" />
-            <element signature="e#2398#3819#0" expanded="true" />
-            <element signature="e#3917#4682#0" expanded="true" />
-            <element signature="e#7220#7731#0" expanded="true" />
-            <element signature="e#7794#8805#0" expanded="true" />
-            <element signature="e#8840#9298#0" expanded="true" />
-            <element signature="e#9358#11686#0" expanded="true" />
-            <element signature="e#11710#12059#0" expanded="true" />
-            <element signature="e#12097#12849#0" expanded="true" />
-            <element signature="e#12907#13128#0" expanded="true" />
-            <element signature="e#13176#13713#0" expanded="true" />
-            <element signature="e#13754#14133#0" expanded="true" />
-            <element signature="e#14154#14338#0" expanded="true" />
-            <element signature="e#14369#14998#0" expanded="true" />
-            <element signature="e#15032#15254#0" expanded="true" />
-            <element signature="e#15298#15720#0" expanded="true" />
-            <element signature="e#15763#15957#0" expanded="true" />
-            <element signature="e#15985#16347#0" expanded="true" />
-            <element signature="e#16387#16688#0" expanded="true" />
-            <element signature="e#16725#16748#0" expanded="true" />
-            <element signature="e#16796#16887#0" expanded="true" />
-            <element signature="e#16924#16947#0" expanded="true" />
-            <element signature="e#16999#17062#0" expanded="true" />
+            <element signature="e#2418#3989#0" expanded="true" />
+            <element signature="e#4087#4862#0" expanded="true" />
+            <element signature="e#4884#6915#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="58" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="0.15549077" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_config.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+        <state line="1" column="48" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_schema.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="11" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.6297787">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="0.15549077">
+        <state line="73" column="16" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="44" selection-start="6014" selection-end="6014" vertical-scroll-proportion="0.54330707">
+        <state line="200" column="34" selection-start="7267" selection-end="7267" vertical-scroll-proportion="0.46420324">
           <folding>
-            <marker date="1465492426000" expanded="true" signature="676:17062" placeholder="..." />
-            <element signature="e#1746#2376#0" expanded="true" />
-            <element signature="e#2398#3819#0" expanded="true" />
-            <element signature="e#3917#4682#0" expanded="true" />
-            <element signature="e#7220#7731#0" expanded="true" />
-            <element signature="e#7794#8805#0" expanded="true" />
-            <element signature="e#8840#9298#0" expanded="true" />
-            <element signature="e#9358#11686#0" expanded="true" />
-            <element signature="e#11710#12059#0" expanded="true" />
-            <element signature="e#12097#12849#0" expanded="true" />
-            <element signature="e#12907#13128#0" expanded="true" />
-            <element signature="e#13176#13713#0" expanded="true" />
-            <element signature="e#13754#14133#0" expanded="true" />
-            <element signature="e#14154#14338#0" expanded="true" />
-            <element signature="e#14369#14998#0" expanded="true" />
-            <element signature="e#15032#15254#0" expanded="true" />
-            <element signature="e#15298#15720#0" expanded="true" />
-            <element signature="e#15763#15957#0" expanded="true" />
-            <element signature="e#15985#16347#0" expanded="true" />
-            <element signature="e#16387#16688#0" expanded="true" />
-            <element signature="e#16725#16748#0" expanded="true" />
-            <element signature="e#16796#16887#0" expanded="true" />
-            <element signature="e#16924#16947#0" expanded="true" />
-            <element signature="e#16999#17062#0" expanded="true" />
+            <element signature="e#2418#3989#0" expanded="true" />
+            <element signature="e#4087#4862#0" expanded="true" />
+            <element signature="e#4884#6915#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExpAssets/Config/WaldoMkII_params.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="25" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.33090025">
+          <folding />
         </state>
       </provider>
     </entry>
