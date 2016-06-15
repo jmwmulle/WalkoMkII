@@ -128,7 +128,7 @@ class WaldoMkII(klibs.Experiment, BoundaryInspector):
 				self.locations = []
 			self.flip()
 
-		self.bg = choice(self.backgrounds)
+		self.bg = self.background[choice(self.backgrounds.keys())]
 		Params.clock.register_event(ET("initial fixation end", Params.fixation_interval))
 		self.eyelink.drift_correct(boundary="trial_fixation")
 		self.display_refresh(True)
